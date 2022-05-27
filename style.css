@@ -1,0 +1,212 @@
+body {
+    background-color: rgb( 30 57 50);
+    color: white;
+    max-width: 100%;
+    max-height: 100vh;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 80% 20%;
+    margin: 0px; } 
+main {
+  max-height: 100vh;
+  max-width: 85%;
+  overflow-wrap: break-word;
+}
+.star {
+  color:#cba258;
+  position: absolute;
+  font-size: 5em;
+  transform: rotate(-11deg);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: clip;
+  z-index: -1;
+}
+.star2 {
+  color:#cba258;
+  position: relative;
+  font-size: 7em;
+  left: 85%;
+  bottom:30%;
+  z-index: -1;
+  transform: rotate(11deg);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: clip;
+  display: inline-block;
+}
+.star3 {
+  color:#cba258;
+  position: relative;
+  font-size: 5em;
+  left: 10%;
+  bottom:30%;
+  transform: rotate(11deg);
+  z-index: -1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: clip;
+  display: inline-block;
+}
+nav {
+    display:flex;
+    /* background-color: rgb(0, 98, 65); */
+    background-color: #28282B;
+    flex-direction: column;
+    justify-content:space-evenly;
+    padding: 0px 2em;
+    min-height: 100vh;
+    max-height: 100vh;
+    min-width: 15%;
+    -webkit-box-shadow: -2px 0px 20px 0px rgba(0,0,0,0.8); 
+box-shadow: -1px 0px 10px 0px rgba(0,0,0,0.2);
+
+}
+#menu {
+  text-align: left;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+a {
+    text-decoration: none;
+    /* color:rgb( 213 233 226); */
+    color: white;
+    border: 10px;
+    width: fit-content;
+    padding: .5em .8em;
+    border-style:solid;
+    border-spacing: 0px;
+    border-width: 1px;
+    text-align: center;
+    align-items: center;
+    border-radius: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: background-color .5s;
+}
+a:hover {
+  /* color: rgb(242 240 235); */
+  /* background-color: rgb(30 57 50); */
+  /* border-color: rgb(30 57 50); */
+  border-color: #cba258;
+  background-color: #cba258;
+  color: white;
+}
+article {
+    margin:10%;
+    position:absolute;
+    justify-self: center ;
+    align-self: center;
+    
+}
+h1, h2 {
+    text-align: center;
+}
+h1 {
+    font-size: 7.5em;
+    font-family: "Lander", Helvetica, sans-serif;
+    margin: 5%;
+}
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 200;
+}
+
+.subtitle {
+  margin: 0px 20%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 200;
+}
+
+.wavy {
+  max-width: 100vw;
+    animation-name: wavy;
+    animation-duration: 2.5s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: -2;
+    font-size: 10em;
+    color: rgb(38, 64, 57);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    max-height: 100vh;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+
+}
+img {
+  max-height: 100px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+  @keyframes wavy {
+    0% {
+      top: 0px;
+    }
+    50% {
+      top: -15px;
+    }
+    100% {
+      top: 0px;
+    }
+  }
+
+@font-face {
+    font-family: "Lander";
+    src: url(LanderGrande-SemiBold.otf) format("");
+    font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  body {
+    display:flex;
+    justify-content: space-between;
+    flex-direction: column;
+    min-height: fit-content;
+    min-height: 100vh;
+    transition: all;
+  }
+  main {
+    min-height:fit-content;
+    max-width: 100vw;
+  }
+  nav {
+    display: grid;
+    text-align: left;
+    position:auto;
+    min-height: fit-content;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 3em 3em;
+    padding: 1em 0em 2em 1em;
+    transition: all;
+    /* display: flex;
+    flex-direction: row ;
+    justify-content: space-between;
+    margin: 0px;
+    min-height: 0%;
+    padding: 0px; */
+  }
+  article {
+    margin: auto;
+  }
+  a { padding: 0px auto;
+      align-self: center;
+  }
+  .star2 {
+    display: none;
+  }
+}
+@media (max-width: 550px) {
+h1 {
+  font-size: 5em;
+}
+article {
+  margin: auto;
+} 
+}
